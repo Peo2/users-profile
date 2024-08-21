@@ -1,64 +1,65 @@
-.api_container{
+.api_container {
     display: grid;
-    grid-template-columns: 300px 300px 300px 300px;
-    gap:50px;
-    padding-left: 20px;
-}
-.box{
-   background-color: rgb(255, 255, 255);
-   border: 2px solid rgb(255, 252, 252);
-   width: 250px;
-   height: 290px;
-   margin-bottom: 10px;
-   border-radius: 5px;
-}
-.card{
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive columns */
+    gap: 20px;
+    padding-left: 10px;
+  }
+  
+  .box {
+    background-color: rgb(255, 255, 255);
+    border: 2px solid rgb(255, 252, 252);
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .card {
     background-color: hwb(240 90% 5% / 0.767);
     border: 2px solid hwb(240 90% 5% / 0.767);
-    width: 247px;
-    height: 210px;
-    /*margin-top: 10px;*/
+    width: 100%;
+    height: auto;
     border-radius: 5px;
-    justify-items: center;
-}
-.name{
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  
+  .name {
     color: blue;
-    padding-left: 35px;
-}
-.user_name{
-   padding-left: 50px;
-   padding-top: 20px;
-}
-.email{
-    padding-left: 20px;
-}
-input{
-    width: 250px;
+    padding: 5px 0;
+  }
+  
+  .user_name, .email {
+    padding-top: 10px;
+    word-wrap: break-word;
+  }
+  
+  input {
+    width: 60%;
     height: 30px;
     border-radius: 10px;
     text-indent: 10px;
-}
-.card img{
-    padding-left: 30px;
-    width: 200px;
-}
-
-@media screen and (max-width:390px){
-    .api_container{
-        display: grid;
-        grid-template-columns: 160px 160px;
+    margin-bottom: 20px;
+  }
+  
+  .card img {
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+  }
+  
+  @media screen and (max-width: 390px) {
+    .api_container {
+      padding-left: 5px;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+    .card_container {
+      padding: 10px;
     }
     .box{
-        width: 200px;
+        width: 170px;
     }
-    .card{
-        width: 197px;
-    }
-    .api_container{
-        padding-left: 5px;
-    }
-    .card img{
-       padding-left: 15px;
-        width: 190px;
-    }
-}
+  }

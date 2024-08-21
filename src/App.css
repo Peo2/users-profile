@@ -6,10 +6,13 @@
 .card_container{
   background-color: hwb(240 90% 5% / 0.767);
   max-width: 1400px;
+  padding: 20px;
+  margin: 0 auto;
+  overflow-x: hidden;
 }
 @media screen and (max-width:390px) {
   .card_container {
-    width: 434px;
+    padding: 10px;
   }
 
 
